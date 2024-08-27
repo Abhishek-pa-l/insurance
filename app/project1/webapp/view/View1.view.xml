@@ -1,0 +1,89 @@
+<mvc:View
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+     xmlns:f="sap.ui.layout.form"
+    xmlns:u="sap.ui.unified"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <f:SimpleForm
+                id="SimpleFormChange35g4"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="5"
+                emptySpanL="5"
+                emptySpanM="5"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            >
+                <f:content>
+                    <Label text="Contract" />
+                    <Input
+                        showValueHelp="true"
+                        valueHelpRequest="onF4ContractNum"
+                        id="contract"
+                    />
+                    <Label text="Customer" />
+                    <Input id="customer" />
+                    <Label text="History" />
+                    <Input
+                        value=""
+                        id="history"
+                    />
+                    <Toolbar>
+                        <Text text="Insurance" />
+                    </Toolbar>
+                    <Label text="Validity Start" />
+                    <DatePicker id="validitystart" />
+                    <Label text="Expiry Date" />
+                    <DatePicker id="expirydate" />
+                    <Label text="Date Of Submission" />
+                    <DatePicker id="submissiondate" />
+                    <Label text="Upload Attachment" />
+                    <u:FileUploader
+                        id="fileUploader"
+                        name="myFileUpload"
+                        uploadUrl="upload/"
+                        tooltip="Upload your file to the local server"
+                        uploadComplete="handleUploadComplete"
+                    />
+                    <Button
+                        text="Upload File"
+                        press="handleUploadPress"
+                    />
+
+                    <Toolbar>
+                        <Text text="Financial Guarantee" />
+                    </Toolbar>
+                    <Label text="Date Of Submission" />
+                    <DatePicker />
+                    <Label text="Upload Attachment" />
+                    <u:FileUploader
+                        id="fileUploader2"
+                        name="myFileUpload"
+                        uploadUrl="upload/"
+                        tooltip="Upload your file to the local server"
+                        uploadComplete="handleUploadComplete"
+                    />
+                    <Button
+                        text="Upload File"
+                        press="handleUploadPress"
+                    />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>
